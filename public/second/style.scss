@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+
+//Variables de familia de fuentes
+$titulo: 'Squada One', cursive;
+$subtitulo: 'Orelega One', cursive;
+$texto: 'El Messiri', sans-serif;
+
+body{
+    .container{
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 20px;
+            section{
+                position: sticky;
+                top: 0;
+                height: 15vh;
+                article{
+                    height:100%;
+                    box-sizing: border-box;
+                    img{
+                        height: 100%;
+                    }
+                    nav{
+                        height: 100%;
+                        details{
+                            font-family: $subtitulo;
+                            font-weight: 100;
+                            height: 100%;
+                            summary{
+                                cursor: pointer;
+                                list-style: none;
+                                display: inline;
+                                text-align: right;
+                                &:focus{
+                                    outline: none;
+                                }
+                                p{
+                                    display: none;
+                                }
+                                img{
+                                    display: inline-block;
+                                    margin: auto;
+                                }
+                                p, img{
+                                    height: 7vh;
+                                    margin: 0;
+                                    padding: 10px;
+                                    color: white;
+                                    background-color: darkolivegreen;
+                                    border: 2px solid transparent;
+                                    border-radius: 10px;
+                                    user-select: none;
+                                }
+                            }
+                            ul{
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                display: inline-block;
+                                li{
+                                    a,a:visited{
+                                        display: inline;
+                                        text-decoration: none;
+                                        color: black;
+                                        margin: 10px;
+                                        user-select: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main{
+            section{
+                &:first-child{
+                    article{
+                        figure{
+                            display: grid;
+                            place-items: center;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 20px;
+                    margin: 15px;
+                    article{
+                        &:first-child{
+                            grid-column: span 3;
+                            h1{
+                                font-family: $titulo;
+                            }
+                            h2{
+                                font-family: $subtitulo;
+                            }
+                            p{
+                                font: 25px $texto;
+                            }
+                        }
+                    }
+                    aside{
+                        grid-column: span 1;
+                        figure{
+                            border: 3px solid black;
+                            img{
+                                vertical-align: top;
+                                width: 100%;
+                            }
+                            figcaption{
+                                text-align: center;
+                                font-family: $subtitulo;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    text-align: center;
+                    font-family: $subtitulo;
+                }
+                &:nth-child(4){
+                    article{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        margin: 10px 0;
+                        place-items: center;
+                        figure{
+                            grid-column: span 1;
+                            margin: 20px;
+                            border: 3px solid black;
+                            padding: 20px;
+                            figcaption{
+                                font: 30px $subtitulo;
+                                font-weight: 500;
+                                text-align: center;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        p{
+                            grid-column: span 1;
+                            font-size:30px;
+                            margin: 30px;
+                            font-family: $texto;
+                        }
+                        &:nth-child(2){
+                            p{
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            section{
+                margin: 10px 0;
+                a{
+                    i{
+                        font-size: 60px;
+                        color: darkolivegreen;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// * MEDIA QUERIES
+
+@media screen and (max-width: 600px) {
+    body{
+        .container{
+            header{
+                section{
+                    article{
+                        nav{
+                            details{
+                                summary{
+                                    display: block;
+                                    text-align: right;
+                                    p{
+                                        display: inline;
+                                    }
+                                    img{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            main{
+                section{
+                    &:first-child{
+                        article{
+                            figure{
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        display: block;
+                    }
+                    &:last-child{
+                        article{
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+            footer{
+                
+            }
+        }
+    }
+}
