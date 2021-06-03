@@ -1,0 +1,22 @@
+{
+  "name": "proyectofinalpaginasweb",
+  "version": "0.8.0",
+  "description": "proyecto final para páginas web: Bautista Arellano Alejandro Jesús 605 Matutino Ramírez González Danna Paola",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroJBArellano/dannaPage.git"
+  },
+  "keywords": [
+    "bachilleres"
+  ],
+  "author": "alejandroarellano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlejandroJBArellano/dannaPage/issues"
+  },
+  "homepage": "https://github.com/AlejandroJBArellano/dannaPage#readme"
+}
