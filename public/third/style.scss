@@ -148,14 +148,33 @@ body{
             }
         }
         footer{
-            display: flex;
-            justify-content: center;
             section{
+                &:first-child{
+                    display: block;
+                    text-align: center;
+                    a,a:visited{
+                        font: 25px $texto;
+                        color: black;
+                        text-decoration: none;
+                        transition: all .5s ease-out;
+                        &:hover{
+                            text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
+                        }
+                    }
+                }
+                display: flex;
+                justify-content: center;
                 margin: 10px 0;
-                a{
+                a,a:visited{
                     i{
+                        margin: 10px;
                         font-size: 60px;
                         color: $verdeOscuro;
+                        transition: all .5s ease-in-out;
+                        &:hover{
+                            transform: translate(0px, -10px);
+                            text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.8);
+                        }
                     }
                 }
             }

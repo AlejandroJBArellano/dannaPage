@@ -176,22 +176,45 @@ body .container main section article div ol {
   padding: 0 20px;
 }
 
-body .container footer {
+body .container footer section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 10px;
 }
 
-body .container footer section {
-  margin: 10px 0;
+body .container footer section:first-child {
+  display: block;
+  text-align: center;
 }
 
-body .container footer section a i {
+body .container footer section:first-child a, body .container footer section:first-child a:visited {
+  font: 25px "El Messiri", sans-serif;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+body .container footer section:first-child a:hover, body .container footer section:first-child a:visited:hover {
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+body .container footer section a i, body .container footer section a:visited i {
+  margin: 10px;
   font-size: 60px;
   color: #3863072c;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+body .container footer section a i:hover, body .container footer section a:visited i:hover {
+  -webkit-transform: translate(0px, -10px);
+          transform: translate(0px, -10px);
+  text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (max-width: 600px) {
