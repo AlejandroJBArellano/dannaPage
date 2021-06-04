@@ -7,7 +7,16 @@ $titulo: 'Squada One', cursive;
 $subtitulo: 'Orelega One', cursive;
 $texto: 'El Messiri', sans-serif;
 
+// Variables de colores
+$verdeAquaClaro: #d0f4c62e;
+$verdeClaro: #bfdb6a3b;
+$amarillo: #d5c31e3f;
+$verdePasto:#8ea11138;
+$verdeOscuro: #3863072c;
+
 body{
+    background: rgb(56,99,7);
+    background: linear-gradient(225deg, rgba(56,99,7,1) 2%, rgba(213,194,30,1) 55%, rgba(143,161,17,1) 92%);
     .container{
         header{
             display: flex;
@@ -53,10 +62,14 @@ body{
                                     margin: 0;
                                     padding: 10px;
                                     color: white;
-                                    background-color: darkolivegreen;
+                                    background-color: $amarillo;
                                     border: 2px solid transparent;
                                     border-radius: 10px;
                                     user-select: none;
+                                    transition: all .5s ease;
+                                    &:hover{
+                                        box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
+                                    }
                                 }
                             }
                             ul{
@@ -71,6 +84,10 @@ body{
                                         color: black;
                                         margin: 10px;
                                         user-select: none;
+                                        transition:all .5s ease;
+                                        &:hover{
+                                            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.55);
+                                        }
                                     }
                                 }
                             }
@@ -87,12 +104,16 @@ body{
                 column-gap: 10px;
                 margin: 20px;
                 article{
-                    background-color: darkolivegreen;
+                    background-color: $verdeOscuro;
                     display: grid;
                     grid-row: span 3;
                     row-gap: 20px;
                     padding: 20px;
                     border-radius: 10px;
+                    transition: all .5s ease;
+                    &:hover{
+                        box-shadow: 0px 6px 19px 8px rgba(0, 0, 0, 0.65);
+                    }
                     h2{
                         margin: 0;
                         text-align: center;
@@ -133,7 +154,7 @@ body{
                 a{
                     i{
                         font-size: 60px;
-                        color: darkolivegreen;
+                        color: $verdeOscuro
                     }
                 }
             }

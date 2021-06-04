@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
+body {
+  background: #386307;
+  background: linear-gradient(225deg, #386307 2%, #d5c21e 55%, #8fa111 92%);
+}
+
 body .container header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,13 +71,20 @@ body .container header section article nav details summary p, body .container he
   margin: 0;
   padding: 10px;
   color: white;
-  background-color: darkolivegreen;
+  background-color: #d5c31e3f;
   border: 2px solid transparent;
   border-radius: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body .container header section article nav details summary p:hover, body .container header section article nav details summary img:hover {
+  -webkit-box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
 }
 
 body .container header section article nav details ul {
@@ -91,6 +103,12 @@ body .container header section article nav details ul li a, body .container head
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body .container header section article nav details ul li a:hover, body .container header section article nav details ul li a:visited:hover {
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.55);
 }
 
 body .container main {
@@ -102,21 +120,30 @@ body .container main section {
 }
 
 body .container main section h1 {
-  font-family: "Squada One", cursive;
+  font: 60px "Squada One", cursive;
+  letter-spacing: 4px;
+  word-spacing: 5px;
 }
 
 body .container main section h2 {
-  font-family: "Orelega One", cursive;
+  font: 38px "Orelega One", cursive;
+  font-weight: 200;
 }
 
 body .container main section p {
+  letter-spacing: 2px;
+  word-spacing: 3px;
   font: 30px "El Messiri", sans-serif;
   margin: 0 30px;
 }
 
+body .container main section img {
+  width: 40%;
+}
+
 body .container main section:last-child {
   padding: 20px 0;
-  background-color: #84ba28;
+  background-color: #3863072c;
 }
 
 body .container main section:last-child p {
@@ -124,9 +151,18 @@ body .container main section:last-child p {
   font-family: "Orelega One", cursive;
   display: inline-block;
   padding: 10px;
-  background-color: darkolivegreen;
+  background-color: #8ea11138;
   border-radius: 8px;
-  color: white;
+  color: black;
+  font-weight: 100;
+  letter-spacing: 2px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body .container main section:last-child p:hover {
+  -webkit-box-shadow: 0px 6px 19px 8px rgba(0, 0, 0, 0.65);
+          box-shadow: 0px 6px 19px 8px rgba(0, 0, 0, 0.65);
 }
 
 body .container main section:last-child a, body .container main section:last-child a:visited {
@@ -135,6 +171,12 @@ body .container main section:last-child a, body .container main section:last-chi
   color: #007bff;
   margin: 10px 0 0 0;
   font-size: 25px;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+}
+
+body .container main section:last-child a:hover, body .container main section:last-child a:visited:hover {
+  text-shadow: 0px -1px 6px rgba(0, 0, 0, 0.71);
 }
 
 body .container footer {
@@ -152,7 +194,7 @@ body .container footer section {
 
 body .container footer section a i {
   font-size: 60px;
-  color: darkolivegreen;
+  color: #3863072c;
 }
 
 @media screen and (max-width: 600px) {

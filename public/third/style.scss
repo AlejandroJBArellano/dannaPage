@@ -7,7 +7,16 @@ $titulo: 'Squada One', cursive;
 $subtitulo: 'Orelega One', cursive;
 $texto: 'El Messiri', sans-serif;
 
+// Variables de colores
+$verdeAquaClaro: #d0f4c62e;
+$verdeClaro: #bfdb6a3b;
+$amarillo: #d5c31e3f;
+$verdePasto:#8ea11138;
+$verdeOscuro: #3863072c;
+
 body{
+    background: rgb(56,99,7);
+    background: linear-gradient(225deg, rgba(56,99,7,1) 2%, rgba(213,194,30,1) 55%, rgba(143,161,17,1) 92%);
     .container{
         header{
             display: flex;
@@ -50,10 +59,14 @@ body{
                                     margin: 0;
                                     padding: 10px;
                                     color: white;
-                                    background-color: darkolivegreen;
+                                    background-color: $amarillo;
                                     border: 2px solid transparent;
                                     border-radius: 10px;
                                     user-select: none;
+                                    transition: all .5s ease;
+                                    &:hover{
+                                        box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
+                                    }
                                 }
                             }
                             ul{
@@ -68,6 +81,10 @@ body{
                                         color: black;
                                         margin: 10px;
                                         user-select: none;
+                                        transition:all .5s ease;
+                                        &:hover{
+                                            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.55);
+                                        }
                                     }
                                 }
                             }
@@ -81,26 +98,40 @@ body{
             section{
                 margin: 0;
                 h1{
-                    font-family: $titulo;
+                    font:60px $titulo;
+                    letter-spacing: 4px;
+                    word-spacing: 5px;
                 }
                 h2{
-                    font-family: $subtitulo;
+                    font: 38px $subtitulo;
+                    font-weight: 200;
                 }
                 p{
+                    letter-spacing: 2px;
+                    word-spacing: 3px;
                     font: 30px $texto;
                     margin: 0 30px;
                 }
+                img{
+                    width: 40%;
+                }
                 &:last-child{
                     padding: 20px 0;
-                    background-color: rgb(132, 186, 40);
+                    background-color: $verdeOscuro;
                     p{
                         border: 3px solid black;
                         font-family: $subtitulo;
                         display: inline-block;
                         padding: 10px;
-                        background-color: darkolivegreen;
+                        background-color: $verdePasto;
                         border-radius: 8px;
-                        color: white;
+                        color: black;
+                        font-weight: 100;
+                        letter-spacing: 2px;
+                        transition: all .5s ease;
+                        &:hover{
+                            box-shadow: 0px 6px 19px 8px rgba(0, 0, 0, 0.65);
+                        }
                     }
                     a,a:visited{
                         display: block;
@@ -108,6 +139,10 @@ body{
                         color: rgb(0, 123, 255);
                         margin: 10px 0 0 0;
                         font-size: 25px;
+                        transition:all .5s ease-in;
+                        &:hover{
+                            text-shadow: 0px -1px 6px rgba(0, 0, 0, 0.71);
+                        }
                     }
                 }
             }
@@ -120,7 +155,7 @@ body{
                 a{
                     i{
                         font-size: 60px;
-                        color: darkolivegreen;
+                        color: $verdeOscuro;
                     }
                 }
             }

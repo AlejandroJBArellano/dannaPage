@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=El+Messiri&display=swap");
+body {
+  background: #386307;
+  background: linear-gradient(225deg, #386307 2%, #d5c21e 55%, #8fa111 92%);
+}
+
 body .container header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,13 +71,20 @@ body .container header section article nav details summary p, body .container he
   margin: 0;
   padding: 10px;
   color: white;
-  background-color: darkolivegreen;
+  background-color: #d5c31e3f;
   border: 2px solid transparent;
   border-radius: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body .container header section article nav details summary p:hover, body .container header section article nav details summary img:hover {
+  -webkit-box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
 }
 
 body .container header section article nav details ul {
@@ -91,6 +103,16 @@ body .container header section article nav details ul li a, body .container head
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+body .container header section article nav details ul li a:hover, body .container header section article nav details ul li a:visited:hover {
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+body .container main section:first-child {
+  background-color: #bfdb6a3b;
 }
 
 body .container main section:first-child article figure {
@@ -100,40 +122,49 @@ body .container main section:first-child article figure {
 }
 
 body .container main section:nth-child(2) {
+  background-color: #8ea11138;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  margin: 15px;
+  padding: 25px;
 }
 
-body .container main section:nth-child(2) article:first-child {
+body .container main section:nth-child(2) article {
   grid-column: span 3;
 }
 
-body .container main section:nth-child(2) article:first-child h1 {
+body .container main section:nth-child(2) article h1 {
   font-family: "Squada One", cursive;
 }
 
-body .container main section:nth-child(2) article:first-child h2 {
+body .container main section:nth-child(2) article h2 {
   font-family: "Orelega One", cursive;
 }
 
-body .container main section:nth-child(2) article:first-child p {
+body .container main section:nth-child(2) article p {
   font: 25px "El Messiri", sans-serif;
 }
 
 body .container main section:nth-child(2) aside {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   grid-column: span 1;
-}
-
-body .container main section:nth-child(2) aside figure {
+  background-color: #8ea11138;
   border: 3px solid black;
 }
 
+body .container main section:nth-child(2) aside figure {
+  margin: 20px;
+  background-color: #d0f4c62e;
+  border: 2px solid black;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
 body .container main section:nth-child(2) aside figure img {
-  vertical-align: top;
   width: 100%;
 }
 
@@ -142,9 +173,25 @@ body .container main section:nth-child(2) aside figure figcaption {
   font-family: "Orelega One", cursive;
 }
 
+body .container main section:nth-child(2) aside figure:hover {
+  -webkit-box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 3px 7px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+
 body .container main section:nth-child(3) {
   text-align: center;
-  font-family: "Orelega One", cursive;
+  font: 35px "Orelega One", cursive;
+  margin: 15px 0;
+}
+
+body .container main section:nth-child(3) h2 {
+  margin: 0;
+}
+
+body .container main section:nth-child(4) {
+  background-color: #3863072c;
 }
 
 body .container main section:nth-child(4) article {
@@ -157,6 +204,7 @@ body .container main section:nth-child(4) article {
 }
 
 body .container main section:nth-child(4) article figure {
+  background-color: #8ea11138;
   grid-column: span 1;
   margin: 20px;
   border: 3px solid black;
@@ -199,7 +247,7 @@ body .container footer section {
 
 body .container footer section a i {
   font-size: 60px;
-  color: darkolivegreen;
+  color: #3863072c;
 }
 
 @media screen and (max-width: 600px) {
@@ -222,6 +270,9 @@ body .container footer section a i {
   body .container main section:last-child article {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  body .container main section:last-child article:first-child {
+    border-bottom: 5px dotted black;
   }
 }
 /*# sourceMappingURL=style.css.map */
