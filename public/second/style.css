@@ -118,8 +118,14 @@ body .container main section {
           user-select: none;
 }
 
-body .container main section:first-child article iframe {
-  width: 100%;
+body .container main section:first-child {
+  background-color: #bfdb6a3b;
+}
+
+body .container main section:first-child article {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 body .container main section:nth-child(2) {
@@ -155,6 +161,7 @@ body .container main section:nth-child(2) aside {
   grid-column: span 1;
   background-color: #8ea11138;
   border: 3px solid black;
+  border-radius: 7px;
 }
 
 body .container main section:nth-child(2) aside figure {
@@ -209,6 +216,7 @@ body .container main section:nth-child(4) article figure {
   grid-column: span 1;
   margin: 20px;
   border: 3px solid black;
+  border-radius: 8px;
   padding: 20px;
 }
 
@@ -220,6 +228,7 @@ body .container main section:nth-child(4) article figure figcaption {
 
 body .container main section:nth-child(4) article figure img {
   width: 100%;
+  border: 2px solid black;
 }
 
 body .container main section:nth-child(4) article p {
@@ -275,6 +284,9 @@ body .container footer section a i:hover, body .container footer section a:visit
 }
 
 @media screen and (max-width: 600px) {
+  body .container header section article nav details {
+    margin: 20px 0;
+  }
   body .container header section article nav details summary {
     display: block;
     text-align: right;
@@ -285,7 +297,7 @@ body .container footer section a i:hover, body .container footer section a:visit
   body .container header section article nav details summary img {
     display: none;
   }
-  body .container main section:first-child article figure img {
+  body .container main section:first-child article iframe {
     width: 100%;
   }
   body .container main section:nth-child(2) {

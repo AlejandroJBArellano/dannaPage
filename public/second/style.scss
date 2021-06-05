@@ -97,10 +97,10 @@ body{
             section{
                 user-select: none;
                 &:first-child{
+                    background-color: $verdeClaro;
                     article{
-                        iframe{
-                            width: 100%;
-                        }
+                        display: grid;
+                        place-items: center;
                     }
                 }
                 &:nth-child(2){
@@ -127,6 +127,7 @@ body{
                         grid-column: span 1;
                         background-color: $verdePasto;
                         border: 3px solid black;
+                        border-radius: 7px;
                         figure{
                             margin: 20px;
                             background-color: $verdeAquaClaro;
@@ -166,6 +167,7 @@ body{
                             grid-column: span 1;
                             margin: 20px;
                             border: 3px solid black;
+                            border-radius: 8px;
                             padding: 20px;
                             figcaption{
                                 font: 30px $subtitulo;
@@ -174,6 +176,7 @@ body{
                             }
                             img{
                                 width: 100%;
+                                border: 2px solid black;
                             }
                         }
                         p{
@@ -236,6 +239,7 @@ body{
                     article{
                         nav{
                             details{
+                                margin: 20px 0;
                                 summary{
                                     display: block;
                                     text-align: right;
@@ -255,10 +259,8 @@ body{
                 section{
                     &:first-child{
                         article{
-                            figure{
-                                img{
-                                    width: 100%;
-                                }
+                            iframe{
+                                width: 100%;
                             }
                         }
                     }

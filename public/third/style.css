@@ -221,6 +221,9 @@ body .container footer section a i:hover, body .container footer section a:visit
 }
 
 @media screen and (max-width: 600px) {
+  body .container header section article nav details {
+    margin: 20px 0;
+  }
   body .container header section article nav details summary {
     display: block;
     text-align: right;
