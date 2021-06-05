@@ -95,12 +95,11 @@ body{
         }
         main{
             section{
+                user-select: none;
                 &:first-child{
-                    background-color: $verdeClaro;
                     article{
-                        figure{
-                            display: grid;
-                            place-items: center;
+                        iframe{
+                            width: 100%;
                         }
                     }
                 }
