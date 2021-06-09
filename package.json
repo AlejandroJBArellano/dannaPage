@@ -4,7 +4,9 @@
   "description": "proyecto final para páginas web: Bautista Arellano Alejandro Jesús 605 Matutino Ramírez González Danna Paola",
   "main": "index.js",
   "scripts": {
-    "test": "npm run dev"
+    "test": "npm run dev",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/AlejandroJBArellano/dannaPage/issues"
   },
-  "homepage": "https://github.com/AlejandroJBArellano/dannaPage#readme"
+  "homepage": "https://github.com/AlejandroJBArellano/dannaPage#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
